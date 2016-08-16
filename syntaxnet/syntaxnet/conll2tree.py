@@ -81,9 +81,9 @@ def main(unused_argv):
         sentence.ParseFromString(d)
         tr = asciitree.LeftAligned()
         d = to_dict(sentence)
-        print 'Input: %s' % sentence.text
+        print 'Input: %s' % sentence.text.encode('UTF-8')
         print 'Parse:'
-        print tr(d)
+        print tr(d).encode('UTF-8')
 
       if finished:
         break
